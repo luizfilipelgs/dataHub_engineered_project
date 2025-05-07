@@ -36,8 +36,8 @@ O sistema foi concebido como um **hub central de dados e operações técnicas**
 
 | Camada | Stack |
 |--------|-------|
-| **Frontend** | React, TypeScript, React Query, Axios, MUI/ShadCN |
-| **Backend** | FastAPI (Python), SQLModel, REST + GraphQL (Strawberry) |
+| **Frontend** | React, TypeScript, React Query, Axios |
+| **Backend** | FastAPI (Python), SQLAlchemy, REST + GraphQL |
 | **Banco de Dados** | SQLite (MVP), PostgreSQL (produção), Redis (cache) |
 | **Mensageria e Realtime** | WebSockets, Redis, RabbitMQ |
 | **Mídia e Processamento** | OpenCV, FastAPI Worker, WebRTC/WebSocket |
