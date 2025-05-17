@@ -128,6 +128,3 @@ back_DHE/
 
 Baseado no guia: [FastAPI do Zero — Dunossauro](https://fastapidozero.dunossauro.com/estavel/)
 
----
-
-Se quiser adicionar variáveis de ambiente, deploy com Docker ou Railway, posso estender o README com essa seção também.
