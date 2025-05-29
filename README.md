@@ -38,7 +38,7 @@ O sistema foi concebido como um **hub central de dados e operações técnicas**
 |--------|-------|
 | **Frontend** | React, TypeScript, React Query, Axios |
 | **Backend** | FastAPI (Python), SQLAlchemy, REST + GraphQL |
-| **Banco de Dados** | SQLite (MVP), PostgreSQL (produção), Redis (cache) |
+| **Banco de Dados** | PostgreSQL, Redis (cache) |
 | **Mensageria e Realtime** | WebSockets, Redis, RabbitMQ |
 | **Mídia e Processamento** | OpenCV, FastAPI Worker, WebRTC/WebSocket |
 | **Infraestrutura (futuro)** | Docker, CI/CD, Kubernetes, S3-like storage |
