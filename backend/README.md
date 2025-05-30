@@ -39,7 +39,7 @@ pipx install poetry
 ```bash
 # Clone o repositório
 git clone <url-do-repo>
-cd back_DHE
+cd <repo-name>
 
 # Configure o Poetry para criar o venv local
 poetry config virtualenvs.in-project true
@@ -61,7 +61,7 @@ task run
 Esse comando roda a aplicação com:
 
 ```
-fastapi dev src/back_dhe/app.py
+fastapi dev src/app/app.py
 ```
 
 A aplicação estará disponível em:
@@ -105,13 +105,25 @@ task lint
 ## 📁 Estrutura do Projeto
 
 ```
-back_DHE/
-├── .venv/                 # Ambiente virtual local
+backend/
+├── .venv/                     # Ambiente virtual local (gerenciado pelo Poetry)
 ├── src/
-│   └── back_dhe/          # Código-fonte da aplicação FastAPI
-├── tests/                 # Testes com Pytest
-├── pyproject.toml         # Configuração central (Poetry, Taskipy, Ruff, etc.)
-├── README.md              # Este arquivo
+│   └── app/                   # Código-fonte principal da aplicação FastAPI
+│       ├── __init__.py
+│       ├── app.py             # Ponto de entrada FastAPI (instancia o `app`)
+│       ├── routes/            # Endpoints agrupados por recurso (ex: users.py)
+│       ├── schemas/           # Schemas Pydantic (validação e serialização)
+│       ├── models/            # Modelos do banco (ex: SQLAlchemy)
+│       ├── services/          # Regras de negócio e lógica da aplicação
+│       ├── repositories/      # Acesso ao banco de dados (CRUD)
+│       ├── deps/              # Dependências reutilizáveis (ex: get_db)
+│       └── core/              # Configurações (ex: settings, conexões)
+├── tests/                     # Testes automatizados com Pytest
+│   ├── __init__.py
+│   └── test_app.py            # Testes básicos (ex: rotas, validações)
+├── pyproject.toml             # Configuração do projeto (Poetry, Taskipy, Ruff, etc.)
+├── README.md                  # Documentação principal do projeto
+
 ```
 
 ---

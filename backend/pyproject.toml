@@ -1,5 +1,5 @@
 [project]
-name = "back-dhe"
+name = "backend"
 version = "0.1.0"
 description = ""
 authors = [
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "back_dhe", from = "src"}]
+packages = [{include = "app", from = "src"}]
 
 
 [tool.poetry.group.dev.dependencies]
@@ -48,7 +48,7 @@ addopts = '-p no:warnings'
 lint = 'ruff check'
 pre_format = 'ruff check --fix'
 format = 'ruff format'
-run = 'fastapi dev src/back_dhe/app.py'
+run = 'fastapi dev src/app/app.py'
 pre_test = 'task lint'
-test = 'pytest -s -x --cov=src/back_dhe -vv'
+test = 'pytest -s -x --cov=src/app -vv'
 post_test = 'coverage html'
