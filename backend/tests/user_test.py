@@ -1,14 +1,9 @@
 from http import HTTPStatus
 
-from fastapi.testclient import TestClient
-
 from app.routes.users import dataBase
-from src.app.app import app
-
-client = TestClient(app)
 
 
-def test_create_user():
+def test_create_user(client):
     response = client.post(
         '/users',
         json={
@@ -26,7 +21,7 @@ def test_create_user():
     }
 
 
-def test_get_users():
+def test_get_users(client):
     dataBase.clear()
     response = client.post(
         '/users',
